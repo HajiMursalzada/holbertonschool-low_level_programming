@@ -10,7 +10,10 @@ int main(void)
 {
 	char ch;
 
-	for (ch = 'z'; ch >= 'a'; ch--)
+	for (ch = 0; ch < 10; ch++)
+		putchar('0' + ch);
+
+	for (ch = 'a'; ch < 'g'; ch++)
 		putchar(ch);
 
 	putchar('\n');
