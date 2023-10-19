@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  *Main
@@ -10,10 +10,10 @@ int main(void)
 {
   foo();
   getchar();
-  return(0);
+  return (0);
 }
 
 void foo(int, int)
 {
-  printf("_putchar");
+  _putchar("_putchar");
 }
