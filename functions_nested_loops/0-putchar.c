@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *Main
  *Return: 0
@@ -8,12 +7,15 @@
 
 int main(void)
 {
-  foo();
-  getchar();
+  _putchar('_');
+  _putchar('p');
+  _putchar('u');
+  _putchar('t');
+  _putchar('c');
+  _putchar('h');
+  _putchar('a');
+  _putchar('r');
+  _putchar('\n');
+  
   return (0);
-}
-
-void foo(int, int)
-{
-  _putchar("_putchar");
 }
