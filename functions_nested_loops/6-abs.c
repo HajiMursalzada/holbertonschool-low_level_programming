@@ -7,6 +7,9 @@
 
 int _abs(int x)
 {
-  _putchar("%d\n");
-  return (0);
+  if ( x < 0)
+    {
+      return (-(x));
+    }
+  return (x);
 }
