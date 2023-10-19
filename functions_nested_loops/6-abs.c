@@ -5,9 +5,8 @@
  *Return: 0
  */
 
-int _abs(int)
+int _abs(int x)
 {
-  int _abs(int x);
   _putchar("%d\n");
   return (0);
 }
