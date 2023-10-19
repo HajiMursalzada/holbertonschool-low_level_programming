@@ -12,7 +12,7 @@ int _islower(int c)
 {
   int ch = 'a', 'A';
   int bh = 'z', 'Z';
-  while (ch <= 'z')
+  while (ch <= bh)
     {
       if (c == ch)
 	{
