@@ -2,6 +2,7 @@
 
 /**
  * _isupper -  checks for uppercase character
+ *
  * @c: int
  *
  * Return: On success 1.
@@ -10,13 +11,13 @@
 
 int _isupper(int c)
 {
-	int ch = "A";
+	int decimal = 65;
 
-	while (ch <= "Z")
+	while (decimal <= 90)
 	{
-		if (c == ch)
+		if (c == decimal)
 			return (1);
-		ch++;
+		decimal++;
 	}
 
 	return (0);
