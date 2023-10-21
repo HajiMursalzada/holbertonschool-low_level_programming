@@ -10,7 +10,7 @@ void print_numbers(void)
 {
 	int decimal = 48;
 
-	for (; decimal <= 57 ; decimal++;)
+	for (; decimal <= 57 ; decimal++)
 	{
 		_putchar(decimal);
 	}
