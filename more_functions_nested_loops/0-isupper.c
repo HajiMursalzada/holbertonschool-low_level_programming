@@ -1,24 +1,21 @@
 #include "main.h"
 
 /**
- *_islower - checks for lowercase character
+ * _isupper -  checks for uppercase character
+ * @c: int
  *
- *@c: int
+ * Return: On success 1.
  *
- *Return: 1 if c is lowercase and 0 otherwise
  */
 
 int _isupper(int c)
 {
-	int ch = 'A';
+	int ch = "A";
 
-	while (ch <= 'Z')
+	while (ch <= "Z")
 	{
 		if (c == ch)
-		{
 			return (1);
-		}
-
 		ch++;
 	}
 
