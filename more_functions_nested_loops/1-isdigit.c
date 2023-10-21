@@ -1,22 +1,23 @@
 #include "main.h"
 
 /**
- * _isupper -  checks for a digit
+ * _isdigit -  checks for a digit (0 through 9)
+ *
  * @c: int
  *
  * Return: On success 1.
- *
  */
 
 int _isdigit(int c)
 {
-	int a = "1";
+	int decimal = 48;
 
-	while (a <= "9")
+	while (decimal <= 57)
 	{
-		if (c == a)
+		if (c == decimal)
 			return (1);
-		a++;
+
+		decimal++;
 	}
 
 	return (0);
