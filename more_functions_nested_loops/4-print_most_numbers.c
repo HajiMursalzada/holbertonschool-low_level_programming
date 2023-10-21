@@ -13,9 +13,7 @@ void print_most_numbers(void)
   for (; decimal <= 57 ; decimal++)
     {
       if(decimal != 2 && decimal != 4)
-	{
 	  _putchar(decimal);
-	}
     }
   
   _putchar('\n');
