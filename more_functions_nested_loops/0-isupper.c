@@ -10,13 +10,13 @@
 
 int _isupper(int c)
 {
-	int decimal = 65;
+	int ch = "A";
 
-	while (decimal <= 90)
+	while (ch <= "Z")
 	{
-		if (c == decimal)
+		if (c == ch)
 			return (1);
-		decimal++;
+		ch++;
 	}
 
 	return (0);
