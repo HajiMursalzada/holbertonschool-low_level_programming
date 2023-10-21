@@ -6,7 +6,7 @@
  *Return: nothing
  */
 
-void print_alphabet_x10(void)
+void more_numbers(void)
 {
 	char ch = 0;
 	int i = 0;
