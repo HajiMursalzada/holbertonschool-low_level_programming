@@ -3,8 +3,10 @@
 /**
  *print_last_digit - computes the absolute value of an integer
  *
+ *@n: int
+ *
  *Return: prints the last digit of a number
- */
+  */
 
 int print_last_digit(int n)
 {
@@ -20,4 +22,3 @@ int print_last_digit(int n)
 	_putchar(last_digit + '0');
 	return (last_digit);
 }
-

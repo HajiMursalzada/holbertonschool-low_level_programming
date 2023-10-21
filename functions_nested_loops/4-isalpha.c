@@ -10,29 +10,29 @@
 
 int  _isalpha(int c)
 {
-  int ch = 'a';
-  
-  while (ch <= 'z')
-    {
-      if (c == ch)
+	int ch = 'a';
+
+	while (ch <= 'z')
 	{
-	  return (1);
+		if (c == ch)
+		{
+			return (1);
+		}
+
+		ch++;
 	}
-      
-      ch++;
-    }
-  
-  ch = 'A';
-  
-  while (ch <= 'Z')
-    {
-      if (c == ch)
+
+	ch = 'A';
+
+	while (ch <= 'Z')
 	{
-	  return (1);
+		if (c == ch)
+		{
+			return (1);
+		}
+
+		ch++;
 	}
-      
-      ch++;
-    }
-  
-  return (0);
+
+	return (0);
 }
