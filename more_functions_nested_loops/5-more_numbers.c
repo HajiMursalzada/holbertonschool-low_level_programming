@@ -1,27 +1,37 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - prints 10 times the numbrs, from 0 to 14
+ * more_numbers -  prints 10 times the numbers, from 0 to 14
  *
- *Return: nothing
+ * Return: nothing
+ *
  */
 
 void more_numbers(void)
 {
-	char ch = 0;
+	int row = 0;
+	int n = 0;
 	int i = 0;
 
-	while (i < 10)
+	for (; row < 10; row++)
 	{
-		while (ch < 15)
+		while (n < 15)
 		{
-			_putchar(ch = '0');
-			ch++;
+			if (n > 9)
+			{
+				if (n == 10)
+					i = 0;
+
+				_putchar(n / 10 + '0');
+			}
+
+			_putchar(i + '0');
+			i++;
+			n++;
 		}
 
+		n = i = 0;
 		_putchar('\n');
-		ch = 'a';
-		i++;
 	}
 
 }
