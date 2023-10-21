@@ -1,4 +1,3 @@
-File Edit Options Buffers Tools C Help
 #include "main.h"
 
 /**
@@ -9,14 +8,15 @@ File Edit Options Buffers Tools C Help
 
 void print_most_numbers(void)
 {
-        int decimal = 48;
-
-        for (; decimal <= 57 ; decimal++)
-        {
-	  decimal != 50;
-	  decimal != 52;
+  int decimal = 48;
+  
+  for (; decimal <= 57 ; decimal++)
+    {
+      if(decimal != 2 && decimal != 4)
+	{
 	  _putchar(decimal);
-        }
-
-        _putchar('\n');
+	}
+    }
+  
+  _putchar('\n');
 }
