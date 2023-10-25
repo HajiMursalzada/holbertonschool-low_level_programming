@@ -3,5 +3,6 @@
 
 int _strlen(char *s)
 {
-  _putchar("%lu\n", sizeof(*s) );
+  *s = new char[];
+  int length =  sizeof(s)/sizof(char);
 }
