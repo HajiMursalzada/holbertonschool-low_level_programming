@@ -3,5 +3,5 @@
 
 int _strlen(char *s)
 {
-  _putchar ("%d", sizeof(*s)/sizeof(*s[0]) );
+  _putchar ("%d\n", sizeof(*s)/4 );
 }
