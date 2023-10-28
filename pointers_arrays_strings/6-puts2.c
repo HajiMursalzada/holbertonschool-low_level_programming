@@ -3,12 +3,13 @@
 
 void puts2(char *str)
 {
-  int i = 1;
+  int i = 0;
   int dec = *str;
   while (dec)
     {
-      _putchar(dec);
       dec = *(str + i);
       i += 2;
+      _putchar(dec);
     }
+  _putchar('\n');
 }
