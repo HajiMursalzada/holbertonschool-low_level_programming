@@ -15,19 +15,19 @@ void rev_string(char *s)
 
 	_putchar('\n');
 	i = 0;
-	dec = *s;
-	while (dec)
+	int revdec = *s;
+	while (revdec)
 	{
 	  i++;
-	  dec = *(s + i); 
+	  revdec = *(s + i); 
 	}
-	dec = *s;
+	revdec = *s;
 	while (i > 0)
         {
 
                 i--;
-                dec = *(s + i);
-                _putchar(dec);
+                revdec = *(s + i);
+                _putchar(revdec);
         }
 
         _putchar('\n');
