@@ -15,6 +15,7 @@ void rev_string(char *s)
 
 	_putchar('\n');
 
+	char *str;
 	int length = 0;
 	int revdec = *str;
 
