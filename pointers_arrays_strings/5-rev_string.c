@@ -14,26 +14,21 @@ void rev_string(char *s)
 	}
 
 	_putchar('\n');
-
-	char *str;
-	int length = 0;
-	int revdec = *str;
-
-	while (revdec)
+	dec = *s;
+	i = 0;
+	while (dec)
 	{
-		length++;
-		revdec = *(str + length);
+	  i++;
+	  dec = *(s + i); 
 	}
+	dec = *s;
+	while (i > 0)
+        {
 
-	revdec = *str;
+                i--;
+                dec = *(s + i);
+                _putchar(dec);
+        }
 
-	while (length > 0)
-	{
-
-		length--;
-		revdec = *(str + length);
-		_putchar(revdec);
-	}
-
-	_putchar('\n');
+        _putchar('\n');
 }
