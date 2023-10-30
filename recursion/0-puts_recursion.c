@@ -4,13 +4,10 @@
 
 void _puts_recursion(char *s)
 {
-  int i = 1;
-  int dec = *s;
-  if(dec)
+  if(*s == '\0')
     {
-      _puts_recursion(s+1);
-      dec = *(s + i);
-      i++;
+      return;
     }
-  return dec;
+  _putchar(*s);
+  _puts_recursion(s+1);
 }
