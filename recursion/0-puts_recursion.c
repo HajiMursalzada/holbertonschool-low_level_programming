@@ -4,8 +4,6 @@
 
 void _puts_recursion(char *s)
 {
-  int i = 1;
   _puts_recursion = *s;
-  return _puts_recursion *(s + i);
-  i++
+  return _puts_recursion = _puts_recursion(*(s+1));
 }
