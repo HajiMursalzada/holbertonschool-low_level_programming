@@ -3,11 +3,9 @@
 
 void _print_rev_recursion(char *s)
 {
-  int dec = *s;
-  _putchar(dec);
-  -- dec;
-  if (dec > 0)
+  if(*s)
     {
-      _print_rev_recursion(dec);
+      _print_rev_recursion(s+1);
+      _putchar("%c", *s)
     }
 }
