@@ -8,9 +8,9 @@ void _puts_recursion(char *s)
   int dec = *s;
   if(dec)
     {
-      return _puts_recursion = dec;
+      _puts_recursion(s+1);
       dec = *(s + i);
       i++;
     }
-  _putchar(/n);
+  return dec;
 }
