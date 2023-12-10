@@ -1,61 +1,43 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts a new node at a given position
- * @h: pointer to the head of the list
- * @idx: index where the new node should be inserted
- * @n: data for the new node
- * Return: pointer to the new node, or NULL on failure
+ * insert_dnodeint_at_index - new node at a given position.
+ * @h: double pointer to the start of the list.
+ * @idx: index of the list where the new node added.
+ * @n: integer to be included in the new node.
+ *
+ * Return: the address of the new node
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-    unsigned int index = 0;
-    dlistint_t *tmp = *h, *newnode = malloc(sizeof(dlistint_t));
+	dlistint_t *current = *h, *new_node;
+	unsigned int i;
 
-    if (!newnode)
-        return NULL;
+	if (h == NULL)
+		return (NULL);
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+	for (i = 0; i < idx - 1 && current != NULL; i++)
+		current = current->next;
 
-    newnode->n = n;
-    newnode->prev = NULL;
-    newnode->next = NULL;
+	if (current == NULL && i == idx)
+		return (add_dnodeint_end(h, n));
+		else if (current == NULL)
+		return (NULL);
+		new_node = malloc(sizeof(dlistint_t));
 
-    if (!*h && idx == 0)
-    {
-        *h = newnode;
-        return newnode;
-    }
+	if (new_node == NULL)
+		return (NULL);
 
-    while (tmp != NULL && index < idx)
-    {
-        tmp = tmp->next;
-        index++;
-    }
+	new_node->n = n;
+	new_node->next = current->next;
+	new_node->prev = current;
 
-    if (idx == 0)
-    {
-        newnode->next = *h;
-        if (*h)
-            (*h)->prev = newnode;
-        *h = newnode;
-        return newnode;
-    }
-    else if (tmp != NULL)
-    {
-        newnode->prev = tmp->prev;
-        newnode->next = tmp;
-        if (tmp->prev)
-            tmp->prev->next = newnode;
-        tmp->prev = newnode;
-        return newnode;
-    }
-    else if (index == idx)
-    {
-        newnode->prev = tmp;
-        if (tmp)
-            tmp->next = newnode;
-        return newnode;
-    }
+	if (current->next != NULL)
+		current->next->prev = new_node;
 
-    free(newnode);
-    return NULL;
+	current->next = new_node;
+
+	return (new_node);
 }
