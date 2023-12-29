@@ -4,6 +4,12 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
+/**
+ * struct types - A new struct type defining a printer.
+ * @z: A symbol representing a data type.
+ * @f: A function pointer to a function that prints
+ *         a data type corresponding to symbol.
+ */
 
 typedef struct types
 {
