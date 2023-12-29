@@ -5,6 +5,7 @@
  * @n: count of given arguments
  * Return: sum if success, 0 if not
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
